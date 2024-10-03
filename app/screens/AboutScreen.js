@@ -18,7 +18,16 @@ const Mission = () => {
 }
 const AboutScreen = () => {
     const [policies, setPolicies] = useState(POLICIES);
-    return <ScrollView>
+    return <ScrollView
+        contentContainerStyle={{
+            flex: 1,
+            paddingHorizontal: '15%',
+        }}
+        style={{
+            width: '100%',
+            height: '100%',
+        }}
+    >
         <Mission />
         <Card>
             <Card.Title>Policy</Card.Title>

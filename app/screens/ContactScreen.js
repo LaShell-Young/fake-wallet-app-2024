@@ -6,7 +6,16 @@ import { useState } from "react";
 
 const ContactScreen = () => {
     const [questions, setQuestions] = useState(FAQ);
-    return <ScrollView>
+    return <ScrollView
+        contentContainerStyle={{
+            flex: 1,
+            paddingHorizontal: '15%',
+        }}
+        style={{
+            width: '100%',
+            height: '100%',
+        }}
+    >
         <Card
             wrapperStyle={{ margin: 20 }}
         >

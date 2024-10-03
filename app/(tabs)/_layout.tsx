@@ -1,56 +1,13 @@
-import { Tabs } from "expo-router";
 import React from "react";
 import { Image, StyleSheet } from "react-native";
-import { TabBarIcon } from "@/components/navigation/TabBarIcon";
-import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import Main from "../screens/MainComponent";
-import ParallaxScrollView from "@/components/ParallaxScrollView";
-import Animated, {
-  interpolate,
-  useAnimatedRef,
-  useAnimatedStyle,
-  useScrollViewOffset,
-} from "react-native-reanimated";
+import HomeScreen from ".";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
-  const scrollRef = useAnimatedRef<Animated.ScrollView>();
 
-  return (
-    <Main />
-    // <Tabs
-    //   screenOptions={{
-    //     tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
-    //     headerShown: false,
-    //   }}
-    // >
-    //   <Tabs.Screen
-    //     name="index"
-    //     options={{
-    //       title: "Home",
-    //       tabBarIcon: ({ color, focused }) => (
-    //         <TabBarIcon
-    //           name={focused ? "home" : "home-outline"}
-    //           color={color}
-    //         />
-    //       ),
-    //     }}
-    //   />
-    //   <Tabs.Screen
-    //     name="explore"
-    //     options={{
-    //       title: "Explore",
-    //       tabBarIcon: ({ color, focused }) => (
-    //         <TabBarIcon
-    //           name={focused ? "code-slash" : "code-slash-outline"}
-    //           color={color}
-    //         />
-    //       ),
-    //     }}
-    //   />
-    // </Tabs>
-  );
+  return <HomeScreen />;
 }
 
 const styles = StyleSheet.create({

@@ -67,31 +67,6 @@ const ContactNavigator = () => {
     );
 }
 
-// const HomeNavigator = () => {
-//     const Stack = createStackNavigator();
-//     return (
-//         <Stack.Navigator
-//             screenOptions={screenOptions}
-//         >
-//             <Stack.Screen
-//                 name='Home'
-//                 component={HomeScreen}
-//                 options={({ navigation }) => ({
-//                     title: 'Home',
-//                     headerLeft: () => (
-//                         <Icon
-//                             name='home'
-//                             type='font-awesome'
-//                             iconStyle={styles.stackIcon}
-//                             onPress={() => navigation.toggleDrawer()}
-//                         />
-//                     )
-//                 })}
-//             />
-//         </Stack.Navigator>
-//     );
-// }
-
 const AccountNavigator = () => {
     const Stack = createStackNavigator();
     return (

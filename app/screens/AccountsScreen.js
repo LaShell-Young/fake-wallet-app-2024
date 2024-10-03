@@ -10,15 +10,17 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
 const FeaturedItem = ({ item }) => {
     if (item) {
-        return <Card
-            containerStyle={{ paddingLeft: 0, paddingRight: 0 }}
-        >
-            <Card.Title>{item.name}</Card.Title>
-            <Card.Image source={item.image} />
-            <Text
-                style={{ margin: 20 }}
-            >{item.description}</Text>
-        </Card>
+        return <View style={{ flex: 1, paddingHorizontal: '20%' }}>
+            <Card
+                containerStyle={{ paddingLeft: 0, paddingRight: 0 }}
+            >
+                <Card.Title>{item.name}</Card.Title>
+                <Card.Image source={item.image} />
+                <Text
+                    style={{ margin: 20 }}
+                >{item.description}</Text>
+            </Card>
+        </View>
     }
     return <View />
 }

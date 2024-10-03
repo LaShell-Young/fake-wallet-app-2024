@@ -50,7 +50,15 @@ const AccountInfoScreen = ({ route, navigation }) => {
         data={history}
         renderItem={renderAccountInfo}
         keyExtractor={(item) => item.id.toString()}
-        contentContainerStyle={{ marginHorizontal: 20, paddingVertical: 20 }}
+        contentContainerStyle={{
+            flex: 1,
+            paddingHorizontal: '15%',
+            paddingVertical: 20
+        }}
+        style={{
+            width: '100%',
+            height: '100%',
+        }}
         ListHeaderComponent={
             <>
                 <RenderAccount account={account} navigation={navigation} />
